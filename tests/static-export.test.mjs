@@ -25,7 +25,9 @@ test("exports the complete case study", async () => {
     "A public site built around the information families need",
     "Clearer paths for teams, dates, and applications",
     "A clearer product experience, built to be maintained",
-    "Launch and production status are not claimed",
+    "After · production screenshot",
+    "Production screenshots captured from the redesigned experience",
+    "Launch timing and performance outcomes are not claimed",
   ]) {
     assert.match(html, new RegExp(marker.replaceAll(".", "\\.")));
   }
