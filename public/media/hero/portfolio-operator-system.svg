@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Product, engineering, and operations system</title>
+  <desc id="desc">A portfolio hero diagram connecting product decisions, software systems, and field operations around an operator at the center.</desc>
+  <defs>
+  <radialGradient id="glow" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#C7FF4A" stop-opacity=".16"/><stop offset="1" stop-color="#0B0D0C" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#303A32" stroke-opacity=".45"/></pattern>
+</defs>
+<rect width="1600" height="900" rx="32" fill="#0B0D0C"/>
+<rect width="1600" height="900" rx="32" fill="url(#grid)"/>
+<circle cx="800" cy="430" r="500" fill="url(#glow)"/>
+<g fill="none" stroke-width="3">
+  <path d="M430 300C590 160 1010 160 1170 300" stroke="#C7FF4A"/>
+  <path d="M1170 300C1320 440 1090 700 800 700" stroke="#79C8FF"/>
+  <path d="M800 700C500 700 280 440 430 300" stroke="#F3B56A"/>
+</g>
+<g font-family="Inter,system-ui,sans-serif">
+  <g transform="translate(235 190)"><rect width="390" height="220" rx="28" fill="#121613" stroke="#303A32"/><circle cx="52" cy="52" r="16" fill="#C7FF4A"/><text x="84" y="62" fill="#F1F4ED" font-size="31" font-weight="750">PRODUCT</text><text x="52" y="125" fill="#AEB8AE" font-size="23">Intent · interaction · evidence</text><path d="M52 165H338" stroke="#303A32"/><text x="52" y="198" fill="#C7FF4A" font-size="18" font-weight="700" letter-spacing="3">DECIDE</text></g>
+  <g transform="translate(975 190)"><rect width="390" height="220" rx="28" fill="#121613" stroke="#303A32"/><circle cx="52" cy="52" r="16" fill="#79C8FF"/><text x="84" y="62" fill="#F1F4ED" font-size="31" font-weight="750">ENGINEERING</text><text x="52" y="125" fill="#AEB8AE" font-size="23">Systems · releases · reliability</text><path d="M52 165H338" stroke="#303A32"/><text x="52" y="198" fill="#79C8FF" font-size="18" font-weight="700" letter-spacing="3">BUILD</text></g>
+  <g transform="translate(605 600)"><rect width="390" height="220" rx="28" fill="#121613" stroke="#303A32"/><circle cx="52" cy="52" r="16" fill="#F3B56A"/><text x="84" y="62" fill="#F1F4ED" font-size="31" font-weight="750">OPERATIONS</text><text x="52" y="125" fill="#AEB8AE" font-size="23">Use · learn · maintain</text><path d="M52 165H338" stroke="#303A32"/><text x="52" y="198" fill="#F3B56A" font-size="18" font-weight="700" letter-spacing="3">OPERATE</text></g>
+  <g transform="translate(650 340)"><circle cx="150" cy="100" r="126" fill="#1A211C" stroke="#C7FF4A" stroke-width="3"/><text x="150" y="90" fill="#F1F4ED" font-size="46" font-weight="800" text-anchor="middle">OPERATOR</text><text x="150" y="132" fill="#AEB8AE" font-size="21" text-anchor="middle">one accountable loop</text></g>
+  <text x="70" y="835" fill="#AEB8AE" font-size="18" letter-spacing="3">JOEL RHINE · PRODUCT DESIGNER · ENGINEER · OPERATOR</text>
+</g>
+</svg>

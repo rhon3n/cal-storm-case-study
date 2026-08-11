@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">California Storm project illustration</title>
+  <desc id="desc">Editorial illustration for California Storm: Editorial continuity with a clearer public experience.</desc>
+  <defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#303A32"/></pattern></defs>
+<rect width="1200" height="750" rx="28" fill="#0B0D0C"/>
+<rect x="32" y="32" width="1136" height="686" rx="24" fill="url(#dots)" stroke="#303A32"/>
+<text x="84" y="112" fill="#F3B56A" font-family="Inter,system-ui,sans-serif" font-size="17" font-weight="800" letter-spacing="4">PRODUCT DESIGN · WORDPRESS</text>
+<text x="84" y="205" fill="#F1F4ED" font-family="Inter,system-ui,sans-serif" font-size="68" font-weight="800">California Storm</text>
+<text x="84" y="257" fill="#AEB8AE" font-family="Inter,system-ui,sans-serif" font-size="25">Editorial continuity with a clearer public experience.</text>
+<g transform="translate(650 280)"><path d="M225 10L420 120v220L225 450 30 340V120Z" fill="#121613" stroke="#79C8FF" stroke-width="3"/><path d="M94 270c54-118 208-118 262 0M130 315h190" fill="none" stroke="#F1F4ED" stroke-width="7" stroke-linecap="round"/><circle cx="225" cy="180" r="52" fill="none" stroke="#F3B56A" stroke-width="7"/><path d="M225 128v104M173 180h104" stroke="#F3B56A" stroke-width="5"/></g>
+<path d="M84 650H1116" stroke="#303A32"/>
+<text x="84" y="687" fill="#AEB8AE" font-family="ui-monospace,monospace" font-size="17">EDITORIAL SYSTEM MAP · NOT A PRODUCT SCREENSHOT</text>
+</svg>
