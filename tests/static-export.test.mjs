@@ -62,6 +62,38 @@ test("emits canonical static social metadata and no unsupported outcome claims",
   assert.doesNotMatch(html, /approved staging implementation|launch status confirmed|conversion rate|endorsed by California Storm/i);
 });
 
+test("publishes only valid public navigation targets", async () => {
+  const html = await outputHtml();
+  for (const brokenPath of [
+    "/work/",
+    "/about/",
+    "/contact/",
+    "/work/measure-coffee/",
+    "/work/shader-studio/",
+  ]) {
+    assert.doesNotMatch(html, new RegExp(`https://rhonen\\.design${brokenPath}`));
+  }
+  assert.match(html, /https:\/\/rhonen\.design\//);
+  assert.match(html, /https:\/\/github\.com\/rhon3n\/cal-storm-case-study/);
+  assert.match(html, /https:\/\/measure\.coffee/);
+  assert.match(html, /https:\/\/rhonen\.design\/shader-studio\//);
+});
+
+test("qualifies project-recorded scale and removes stale publication gates", async () => {
+  const html = await outputHtml();
+  const readme = await readFile(path.join(root, "README.md"), "utf8");
+
+  assert.match(html, /Project-recorded scale/);
+  assert.match(html, /approximately 104 published pages/i);
+  assert.match(html, /~17 branded templates/);
+  assert.match(html, /~8 teams/);
+  assert.match(html, /~76 retained player records/);
+  assert.match(html, /portfolio artifacts describe four purpose-built WordPress plugins/i);
+  assert.doesNotMatch(html, /Verified project facts|publication approval pending/i);
+  assert.doesNotMatch(readme, /does not claim that the redesign launched or reached production|Publication gate|Do not make the repository public or deploy it/i);
+  assert.match(readme, /production screenshots/i);
+});
+
 test("does not export secrets or local hosting state", async () => {
   const forbidden = [".env", ".wrangler", "wrangler.json", "*.pem"];
   const files = await readdir(out, { recursive: true });

@@ -50,9 +50,8 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="https://rhonen.design/">Rhonen</a>
         <nav aria-label="Primary navigation">
-          <a href="https://rhonen.design/work/">Work</a>
-          <a href="https://rhonen.design/about/">About</a>
-          <a href="https://rhonen.design/contact/">Contact</a>
+          <a href="https://rhonen.design/">Portfolio</a>
+          <a href="https://github.com/rhon3n/cal-storm-case-study">Source</a>
         </nav>
       </header>
 
@@ -89,11 +88,11 @@ export default function Home() {
         <div className="section-copy">
           <p>California Storm had years of useful program information online, but families had to navigate page builders, shortcodes, plugins, and legacy menus to find it. The rebuild centered the experience on the routes they use most: schedules, teams, tryouts, applications, and program history.</p>
           <p>WordPress remained the editorial source of truth. The new site gives the club a clearer public experience without forcing staff to abandon familiar publishing tools.</p>
-          <div className="facts" aria-label="Verified project facts">
-            <p>104 published pages inventoried</p>
-            <p>17 branded templates</p>
-            <p>Eight teams</p>
-            <p>76 retained player records</p>
+          <div className="facts" aria-label="Project-recorded scale">
+            <p>Approximately 104 published pages inventoried</p>
+            <p>~17 branded templates</p>
+            <p>~8 teams</p>
+            <p>~76 retained player records</p>
           </div>
         </div>
       </section>
@@ -136,7 +135,7 @@ export default function Home() {
           <h2 id="approach-title">Start with content and data ownership</h2>
         </div>
         <div className="section-copy">
-          <p>I began with an inventory of 104 published pages. Each page was classified as canonical, redirect, archive, retain, or review. That made it possible to simplify the experience without losing useful content or breaking the systems behind it.</p>
+          <p>The project inventory recorded approximately 104 published pages. Each page was classified as canonical, redirect, archive, retain, or review. That made it possible to simplify the experience without losing useful content or breaking the systems behind it.</p>
           <p>The visual system kept the club&apos;s blue identity and added Barlow typography, sharp court geometry, stronger photography, and focused accent color. Mobile was treated as its own experience, with compact navigation, readable schedules, touch-sized controls, and reduced-motion support.</p>
         </div>
         <figure className="wide-figure editorial-figure">
@@ -153,7 +152,7 @@ export default function Home() {
         </div>
         <div className="decision-grid">
           <article><h3><Icon name="system" />Keep source systems in place</h3><p>TablePress, Google Calendar, forms, commerce records, and WordPress content already supported the club&apos;s day-to-day work. I kept those systems authoritative and rebuilt the interfaces around them for clearer search, filtering, and responsive use.</p></article>
-          <article><h3><Icon name="code" />Give each WordPress concern a clear boundary</h3><p>The implementation separates editorial configuration, automation, page rendering, and the flagship landing experience into four purpose-built plugins. That structure lets staff update content without reopening the design and avoids placing every concern in one theme.</p><strong className="callout">Four purpose-built WordPress plugins</strong></article>
+          <article><h3><Icon name="code" />Give each WordPress concern a clear boundary</h3><p>The portfolio artifacts describe four purpose-built WordPress plugins separating editorial configuration, automation, page rendering, and the flagship landing experience. That structure lets staff update content without reopening the design and avoids placing every concern in one theme.</p><strong className="callout">~4 purpose-built WordPress plugins</strong></article>
           <article><h3>Design for quick decisions on a phone</h3><p>Schedules, applications, and team information often matter most away from a desk. The new layouts prioritize readable event information, shorter navigation paths, and controls that work at smaller sizes.</p></article>
         </div>
       </section>
@@ -178,7 +177,7 @@ export default function Home() {
         <div className="section-copy">
           <p>The project produced a clearer public information architecture and a more governed WordPress publishing system. The handoff includes guidance for day-to-day editing, data ownership, publishing, rollbacks, and launch procedures. It also identifies the source of truth, relevant template, verification path, and rollback option for future changes.</p>
           <p>This case study does not make claims about launch status, traffic, registrations, conversions, revenue, accessibility conformance, user-test results, or client endorsement. Those claims require primary project records and California Storm&apos;s approval.</p>
-          <aside className="media-hold"><strong>Operational handoff image and publication approval pending.</strong><span>The final documentation gives staff and future developers a practical path for safe changes.</span></aside>
+          <aside className="media-hold"><strong>Operational handoff documented.</strong><span>The final documentation gives staff and future developers a practical path for safe changes.</span></aside>
         </div>
       </section>
 
@@ -191,8 +190,8 @@ export default function Home() {
       </section>
 
       <section className="calls-to-action grid-shell" aria-label="Calls to action">
-        <button type="button" disabled aria-disabled="true">View the redesigned experience <Icon name="external-link" /></button>
-        <a href="https://rhonen.design/work/">Explore more work <Icon name="arrow-up-right" /></a>
+        <a href="https://github.com/rhon3n/cal-storm-case-study">View source repository <Icon name="external-link" /></a>
+        <a href="https://rhonen.design/">Explore more work <Icon name="arrow-up-right" /></a>
       </section>
 
       <section className="explore grid-shell" aria-labelledby="explore-title">
@@ -202,14 +201,14 @@ export default function Home() {
           <img src={assetPath("media/projects/measure-coffee-system.svg")} alt="Editorial system map for measure.coffee, representing coffee knowledge organized around the next decision." width="1440" height="900" loading="lazy" />
           <h3>measure.coffee</h3>
           <p>Generated editorial system map. Not a product screenshot.</p>
-          <a href="https://rhonen.design/work/measure-coffee/">Explore measure.coffee</a>
+          <a href="https://measure.coffee">Explore measure.coffee</a>
         </article>
         <article>
           <p className="section-label">Editorial illustration</p>
           <img src={assetPath("media/projects/shader-studio-system.svg")} alt="Editorial system map for Shader Studio, representing local-first browser media processing." width="1440" height="900" loading="lazy" />
           <h3>Shader Studio</h3>
           <p>Generated editorial system map. Not a product screenshot.</p>
-          <a href="https://rhonen.design/work/shader-studio/">Explore Shader Studio</a>
+          <a href="https://rhonen.design/shader-studio/">Explore Shader Studio</a>
         </article>
       </section>
 
