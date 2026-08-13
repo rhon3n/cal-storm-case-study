@@ -26,6 +26,7 @@ Open `http://localhost:3000/` on the Mac. When Tailscale is active on both devic
 npm run build
 npm run lint
 npm test
+npm run test:pages
 ```
 
-The generated social-preview asset is `public/og.png`. Request-aware metadata resolves it against the active host, so the image URL remains correct on localhost, Tailscale, or a future portfolio domain.
+The generated social-preview asset is `public/og.png`. Deployment-aware metadata and asset paths keep local previews rooted at `/` while the GitHub Pages build targets `/cal-storm-case-study/`.

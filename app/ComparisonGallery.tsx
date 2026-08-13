@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const assetPath = (path: string) => `${basePath}${path}`;
+
 const comparisons = [
   {
     id: "home",
     label: "Homepage",
-    before: "/comparisons/before-home-desktop.jpg",
-    after: "/comparisons/after-home-desktop.jpg",
+    before: assetPath("/comparisons/before-home-desktop.jpg"),
+    after: assetPath("/comparisons/after-home-desktop.jpg"),
     beforeAlt: "Original California Storm homepage",
     afterAlt: "Redesigned California Storm video homepage",
     note: "From a dense promotional header and fixed content tiles to a cinematic, navigable brand story.",
@@ -15,8 +18,8 @@ const comparisons = [
   {
     id: "tryouts",
     label: "Tryouts",
-    before: "/comparisons/before-tryouts-desktop.jpg",
-    after: "/comparisons/after-tryouts-desktop.jpg",
+    before: assetPath("/comparisons/before-tryouts-desktop.jpg"),
+    after: assetPath("/comparisons/after-tryouts-desktop.jpg"),
     beforeAlt: "Original California Storm tryout applications page",
     afterAlt: "Redesigned regional California Storm tryouts hub",
     note: "From undifferentiated application buttons to seven regional pathways, contextual dates, and progressive disclosure.",
@@ -24,8 +27,8 @@ const comparisons = [
   {
     id: "schedule",
     label: "Schedule",
-    before: "/comparisons/before-schedule-desktop.jpg",
-    after: "/comparisons/after-schedule-desktop.jpg",
+    before: assetPath("/comparisons/before-schedule-desktop.jpg"),
+    after: assetPath("/comparisons/after-schedule-desktop.jpg"),
     beforeAlt: "Original California Storm tournament schedule",
     afterAlt: "Redesigned filterable California Storm tournament schedule",
     note: "The same editorial source became searchable, filterable, responsive, and easier to scan without duplicating its data.",
@@ -33,8 +36,8 @@ const comparisons = [
   {
     id: "hall",
     label: "Hall of Fame",
-    before: "/comparisons/before-hall-desktop.jpg",
-    after: "/comparisons/after-hall-desktop.jpg",
+    before: assetPath("/comparisons/before-hall-desktop.jpg"),
+    after: assetPath("/comparisons/after-hall-desktop.jpg"),
     beforeAlt: "Original California Storm Hall of Fame",
     afterAlt: "Redesigned California Storm Hall of Fame",
     note: "Legacy imagery and destinations were preserved while the layout, hierarchy, contrast, and responsive behavior were rebuilt.",

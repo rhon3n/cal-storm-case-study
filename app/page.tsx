@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { ComparisonGallery } from "./ComparisonGallery";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? "http";
-  const socialImage = `${protocol}://${host}/og.png`;
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const assetPath = (path: string) => `${basePath}${path}`;
+
+export function generateMetadata(): Metadata {
+  const socialImage = new URL(assetPath("/og.png"), siteUrl).toString();
   const title = "California Storm — WordPress Experience Rebuild";
   const description =
     "A product design and development case study covering data migration, front-end design, WordPress plugin architecture, and operational handoff.";
@@ -63,7 +63,7 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#top" aria-label="California Storm case study home">
-          <img src="/storm-logo.png" alt="California Storm" width="300" height="115" />
+          <img src={assetPath("/storm-logo.png")} alt="California Storm" width="300" height="115" />
           <span>Case study</span>
         </a>
         <nav aria-label="Case study sections">
@@ -96,15 +96,15 @@ export default function Home() {
         <div className="hero-visual" aria-label="Updated California Storm homepage shown on desktop and mobile">
           <div className="browser-frame">
             <div className="browser-bar"><i /><i /><i /><span>calstormbasketball.com</span></div>
-            <img src="/comparisons/after-home-desktop.jpg" alt="Updated California Storm homepage on desktop" width="1440" height="900" />
+            <img src={assetPath("/comparisons/after-home-desktop.jpg")} alt="Updated California Storm homepage on desktop" width="1440" height="900" />
           </div>
           <div className="phone-frame before-phone">
             <span>Before</span>
-            <img src="/comparisons/before-home-mobile.jpg" alt="Original California Storm homepage on mobile" width="390" height="844" />
+            <img src={assetPath("/comparisons/before-home-mobile.jpg")} alt="Original California Storm homepage on mobile" width="390" height="844" />
           </div>
           <div className="phone-frame after-phone">
             <span>After</span>
-            <img src="/comparisons/after-home-mobile.jpg" alt="Updated California Storm homepage on mobile" width="390" height="844" />
+            <img src={assetPath("/comparisons/after-home-mobile.jpg")} alt="Updated California Storm homepage on mobile" width="390" height="844" />
           </div>
         </div>
       </section>
@@ -200,11 +200,11 @@ export default function Home() {
           </div>
           <div className="mobile-pair">
             <figure>
-              <img src="/comparisons/after-home-mobile.jpg" alt="Responsive California Storm mobile homepage" width="390" height="844" loading="lazy" />
+              <img src={assetPath("/comparisons/after-home-mobile.jpg")} alt="Responsive California Storm mobile homepage" width="390" height="844" loading="lazy" />
               <figcaption>Mobile storytelling</figcaption>
             </figure>
             <figure>
-              <img src="/comparisons/after-form-mobile.jpg" alt="Responsive California Storm tryout information form" width="390" height="844" loading="lazy" />
+              <img src={assetPath("/comparisons/after-form-mobile.jpg")} alt="Responsive California Storm tryout information form" width="390" height="844" loading="lazy" />
               <figcaption>Conversion-focused form</figcaption>
             </figure>
           </div>
@@ -419,7 +419,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <img src="/storm-logo.png" alt="California Storm" width="300" height="115" />
+        <img src={assetPath("/storm-logo.png")} alt="California Storm" width="300" height="115" />
         <p>Portfolio case study · Product design, front-end development, WordPress architecture, and operational handoff.</p>
         <a href="#top">Back to top ↑</a>
       </footer>

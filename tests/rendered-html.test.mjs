@@ -41,12 +41,12 @@ test("server-renders the complete California Storm case study", async () => {
   assert.match(html, /After · redesigned system/);
 });
 
-test("emits request-aware social metadata and the machine handoff excerpt", async () => {
+test("emits deployment-aware social metadata and the machine handoff excerpt", async () => {
   const response = await render();
   const html = await response.text();
 
-  assert.match(html, /property="og:image" content="http:\/\/portfolio\.test\/og\.png"/);
-  assert.match(html, /name="twitter:image" content="http:\/\/portfolio\.test\/og\.png"/);
+  assert.match(html, /property="og:image" content="http:\/\/localhost:3000\/og\.png"/);
+  assert.match(html, /name="twitter:image" content="http:\/\/localhost:3000\/og\.png"/);
   assert.match(html, /calstorm-site\/get-agent-handoff/);
   assert.match(html, /TablePress 148/);
   assert.match(html, /Fluent Form 3/);
